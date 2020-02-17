@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+<style>
+*{
+    padding: 0;
+    margin: 0;
+}
+[v-cloak]{
+    display: none;
+}
+.el-carousel__item h3 {
+    color: #475669;
+    font-size: 18px;
+    opacity: 0.75;
+    line-height: 300px;
+    margin: 0;
+  }
+  
+  .el-carousel__item:nth-child(2n) {
+    background-color: #99a9bf;
+  }
+  
+  .el-carousel__item:nth-child(2n+1) {
+    background-color: #d3dce6;
+  }
+</style>
+</head>
+<body>
+    <div id="box" v-cloak="">
+        <el-container >
+            <el-header style="height: 60px; background: #ccc; line-height: 60px;">
+                <div>
+                    <navz></navz>
+                </div>
+            </el-header>
+                <el-main>
+                    <router-view></router-view>
+                </el-main>
+            <el-footer style="height: 120px; background: #ccc; line-height: 60px;">
+                
+            </el-footer>
+        </el-container>
+    </div>
+    <!-- --------------------------- -->
+    <template id="index">
+        
+        <div>
+            
+            网站首页
+            
+        </div>
+    </template>
+    <template id="guanyu">
+        <div>
+            <el-container>
+            <el-aside style="width: 300px; min-height: 300px;">
+                <navrow></navrow>
+            </el-aside>
+           
+                <el-main style="min-height: 400px;">
+                    <router-view></router-view>
+                </el-main>
+          
+        </el-container>
+            
+        </div>
+    </template>
+    <template id="chanpin">
+        <div>
+            产品中心
+        </div>
+    </template>
+    <template id="yanfa">
+        
+            <div>
+                <el-container>
+                <el-aside style="width: 300px; min-height: 300px;">
+                    <navrow1></navrow1>
+                </el-aside>
+               
+                    <el-main style="min-height: 400px;">
+                        <router-view></router-view>
+                    </el-main>
+              
+            </el-container>
+                
+            </div>
+    </template>
+    <template id="texiao">
+        <div>
+            <div>
+                <el-container>
+                <el-aside style="width: 300px; min-height: 300px;">
+                    <navrow2></navrow2>
+                </el-aside>
+               
+                    <el-main style="min-height: 400px;">
+                        <router-view></router-view>
+                    </el-main>
+              
+            </el-container>
+                
+            </div>
+        </div>
+       
+    </template>
+    <template id="zixun">
+        <div>
+            咨询中心
+        </div>
+        
+    </template>
+    <template id="lianxi">
+        <div>
+            联系我们
+        </div>
+    </template>
+    <template id="type_routers">
+        <div>
+            {{$route.params}}
+        </div>
+    </template>
+</body>
+<script src="vue.js"></script>
+<script src="route.js"></script>
+<script src="index2.js"></script>
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="index.js"></script>
+<script>
+
+
+</script>
+</html>
